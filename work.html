@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work — AMAZING WEBTECH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+    --bg: #ffffff;
+    --text: #000000;
+    --text-secondary: #666666;
+    --border: #E0E0E0;
+    --accent: #FF0000;
+  }
+  
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  
+  .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  
+  /* Header */
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .nav { display: flex; align-items: center; gap: 24px; }
+  .cta {
+    display: none;
+    border: 1px solid currentColor;
+    padding: 8px 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  @media (min-width: 768px) { .cta { display: inline-flex; } }
+  
+  .hamburger { display: inline-flex; width: 24px; height: 20px; gap: 4px; flex-direction: column; justify-content: center; }
+  .hamburger span { display: block; height: 2px; background: currentColor; }
+  
+  /* Main offset for fixed header */
+  .site-main { padding-top: 84px; }
+  
+  /* Hero */
+  .hero { padding: 60px 0 20px; }
+  .hero-grid { display: grid; gap: 24px; }
+  @media (min-width: 768px) { .hero { padding: 84px 0 28px; } .hero-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .section-label {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    margin: 0 0 12px;
+  }
+  .hero-title { font-size: clamp(36px, 6vw, 64px); line-height: 1.1; margin: 0; font-weight: 700; }
+  .hero-desc { color: var(--text-secondary); font-size: 16px; max-width: 540px; margin: 0; }
+  .hero-right { display: flex; align-items: end; }
+  
+  /* Work Grid */
+  .work-grid { padding: 20px 0 40px; }
+  @media (min-width: 768px) { .work-grid { padding: 40px 0 64px; } }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+  @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+  
+  .card {
+    border: 1px solid var(--border);
+    transform: translateZ(0);
+    transition: transform .3s ease;
+    display: block;
+  }
+  .card:hover {
+     transform: scale(1.02); 
+    }
+  
+  .thumb { 
+    aspect-ratio: 3 / 4; background: #f5f5f5; overflow: hidden; 
+}
+  .thumb img { 
+    width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease;
+ }
+  .card:hover .thumb img {
+     transform: scale(1.05); 
+    }
+  
+  .meta {
+     padding: 16px 18px; 
+}
+  .meta h3 {
+     margin: 0 0 6px; font-size: 18px; font-weight: 700;
+     }
+  .meta p { 
+    margin: 0; font-size: 14px; color: var(--text-secondary);
+ }
+  
+  /* Footer */
+  .site-footer { 
+    border-top: 1px solid var(--border); 
+}
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+  .scroll { 
+    color: var(--text-secondary); font-size: 14px;
+ }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+          <a href="index.html" aria-label="Go to home">
+            <img src="img/logo.jpg" alt="logo" class="logo" aria-hidden="true" height="120px" width="80px">
+          </a>
+        <nav class="nav">
+          <a class="cta" href="#">LET'S TALK</a>
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="section-label">CASE STUDIES</p>
+            <h1 class="hero-title">Some of our finest work.</h1>
+          </div>
+          <div class="hero-right">
+            <p class="hero-desc">Solving diverse business needs through great design and UX.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-grid">
+        <div class="container">
+          <div class="grid">
+            <a class="card" href="karat.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/21qXq3so5DVxpNNIweu3T9/f249f25a589de3f784bb9b4ec0930cc6/Baunfire-Karat-Website-Case-Study_00_-_Thumbnail_-_840x1122.png?w=840&h=1122&q=90&fm=webp" alt="Karat case study" /></div>
+              <div class="meta"><h3>Karat</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="cellares.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/nm7J0zTD3MXQP0ggtciwJ/160c0a27b79db1a5a9348c5647c6c290/01U_Baunfire_Case_Study_Cellares_Website_Thumbnail.png?w=1680&h=2244&q=90&fm=webp" alt="Cellares case study" /></div>
+              <div class="meta"><h3>Cellares</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="lumana.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/7lfORZnDawbgHbpBDKApA3/4eb2ae12c4e443ea7a96a4d84f49e5da/Baunfire_Case_Study_-_Lumana_-_00_-_Thumbnail_-_840x1122-A__1_.png?w=1680&h=2244&q=90&fm=webp" alt="Lumana case study" /></div>
+              <div class="meta"><h3>Lumana</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="ambi.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/7fzu9TTuBamA12tf8vPOzt/73cbedcb9d3e7069daabc9a2f3fa6187/Baunfire_Case_Study_-_Ambi_Robotics_-_Thumbnail_Image.png?w=1120&h=1496&q=90&fm=webp" alt="Ambi Robotics case study" /></div>
+              <div class="meta"><h3>Ambi Robotics</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="optimal-dynamics.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/6p4cQX2lQRf8d9CbPKARSp/6f8b963e327c48febc464a08473cacd4/CaseStudy_Thumbnail.webp?w=840&h=1122&q=90" alt="Optimal Dynamics case study" /></div>
+              <div class="meta"><h3>Optimal Dynamics</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="replicant-ai.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/16G6lC8DlOQYBvjjgtK1kQ/c5a938bcb5741d838a46ed0b6f654f94/00_-_Thumbnail_-_840x1122_C.png?w=840&h=1122&q=90&fm=webp" alt="Replicant AI case study" /></div>
+              <div class="meta"><h3>Replicant AI</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="incorta.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/4mEGXgt1ZbAULLNGBxylr9/8d0b75b0443d2b0866e690d8b2e5594a/Baunfire_CaseStudy_Incorta_CorporateB2BWebsite_Thumbnail_A.png?w=840&h=1122&q=90&fm=webp" alt="Incorta case study" /></div>
+              <div class="meta"><h3>Incorta</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="unifi-protocol.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/2j25qGEC9lMXKc0MqQ8jla/bd067d37960cd54418a84db378a48473/Thumbnail_840_x_1122.png?w=840&h=1122&q=90&fm=webp" alt="Unifi Protocol case study" /></div>
+              <div class="meta"><h3>Unifi Protocol</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="ctrlstack.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/3itjpN0MFEMk9UsnvFbqsr/c94b8355898cfb523c6b6b6b3d72c3ea/Baunfire_Case_Study_-_CtrlStack_-_00_-_Thumbnail_-_840x1122.png?w=1680&h=2244&q=90&fm=webp" alt="CtrlStack case study" /></div>
+              <div class="meta"><h3>CtrlStack</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="instabase.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/759SwxgRVQA6dvTRf1yef7/2c0885221dc099bef4816339454f2b91/Listing_Thumbnail_Drak.png?w=1260&h=1683&q=90&fm=webp" alt="Instabase case study" /></div>
+              <div class="meta"><h3>Instabase</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="google.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/2L156TzAu992thz4M2Wz1K/7ccf5124cfc6e8f3f7c026f1eb310468/Baunfire_GoogleCaseStudy_ListingThumbnail__1_.jpeg?w=840&h=1122&q=90&fm=webp" alt="Google case study" /></div>
+              <div class="meta"><h3>Google</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="aeye.html">
+              <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/edY0pwNUbhhm13wUYTZnT/b4c5904c774f5451c044374b39de92aa/Baunfire_Case_Study_AEye_Website_Thumbnail_Image_A.png?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+              <div class="meta"><h3>AEye</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="plexsystem.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/62Hue7UdLtvwdHnmXOk7nQ/1d37d102d7b645390b6e1d8f5fec4461/Baunfire_PlexCaseStudy_ListingThumbnailImage.png?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>Plex System</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="benchling.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/4wjMJKL6sBduo3rt0sQ9Ys/6e96b98490532b26d251c1ed5ba0b03a/landing_benchling.png?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>Benchling</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="windfall.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/YUczj1OGhWtIuG3mZRaw2/05fc2763ac292ba44cf790e5b76a8a88/_ListingThumbnail.jpg?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>Windfall</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="norwest.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/1PKP87YFh6C09ADADtFCS8/9872e8c42b15c0474dc2af7c154f0dc5/Thumbnail.jpg?w=1260&h=1683&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>Norwest</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="gotenna.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/3s30HCgvSNHA4YHXtGtBEm/14d539f14252a86829dd004491e40ac0/work_thumbnail_02__1_.jpg?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>gotenna</h3><p>Corporate website</p></div>
+            </a>
+            <a class="card" href="arlo.html">
+                <div class="thumb"><img src="https://images.ctfassets.net/eqb1x10m46e1/477EnlyHcLyEkA7a5XCQDK/afc633d87118a493e00ec3218cfdbfc6/arlo.jpg?w=840&h=1122&q=90&fm=webp" alt="AEye case study" /></div>
+                <div class="meta"><h3>Arlo</h3><p>Corporate website</p></div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="section-label">CASE STUDIES</p>
+        <p class="scroll">Scroll</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Services - AMAZING WEBTECH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #000;
+  }
+  
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .services-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 100px 0;
+    background: #fff;
+  }
+  
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+  
+  .content-left {
+    position: sticky;
+    top: 120px;
+  }
+  
+  .intro-text {
+    margin-bottom: 60px;
+  }
+  
+  .intro-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .intro-text strong {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .services-list {
+    margin-bottom: 60px;
+  }
+  
+  .services-list h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .services-list ul {
+    list-style: none;
+  }
+  
+  .services-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .additional-services h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .service-links {
+    list-style: none;
+  }
+  
+  .service-links li {
+    margin-bottom: 10px;
+  }
+  
+  .service-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .service-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .content-right {
+    padding-left: 40px;
+  }
+  
+  .content-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: justify;
+  }
+  
+  .cta-section {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    padding: 15px 0;
+    border-bottom: 2px solid #333;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .cta-link:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+  }
+  
+  /* Recent Work Section */
+  .recent-work {
+    padding: 100px 0;
+    background: #f8f8f8;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 80px;
+    color: #333;
+  }
+  
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .work-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .work-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .work-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .work-item:hover .work-image img {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .content-left {
+      position: static;
+    }
+  
+    .content-right {
+      padding-left: 0;
+    }
+  
+    .container {
+      padding: 0 15px;
+    }
+  
+    .main-content {
+      padding: 60px 0;
+    }
+  
+    .recent-work {
+      padding: 60px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 28px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .content-text p {
+      font-size: 15px;
+    }
+  }
+  
+  .project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background: var(--secondary-bg);
+    box-shadow: 0 10px 40px rgb(19, 19, 19);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgb(44, 43, 43);
+}
+
+.project-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.con {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: #e22525;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+/* Removed duplicate .cont selector to resolve duplicate selector error */
+
+.subtitle {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.main-title {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+
+/* Main content */
+.cont {
+/* Main content */
+.cont {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+}
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Removed duplicate .main-title selector to resolve duplicate selector error */
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cta-button::after {
+    content: '+';
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .con {
+        padding: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-title {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 1.75rem;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .con {
+        padding: 1rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+}
+.footer {
+    padding: 120px 0 60px;
+    border-top: 1px solid rgba(5, 3, 3, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    color: #000000;
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.footer-email,
+.footer-phone,
+.footer-link {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-email:hover,
+.footer-phone:hover,
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.footer-address {
+
+    font-size: 14px;
+    opacity: 0.6;
+    text-align: center;
+    padding-top: 60px;
+    border-top: 1px solid rgba(227, 219, 219, 0.1);
+}
+
+</style>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+              <a href="index.html" aria-label="Go to home">
+                <img src="img/logo.jpg" alt="logo" class="logo" aria-hidden="true" height="120px" width="80px">
+              </a>
+            </div>
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.ctfassets.net/eqb1x10m46e1/7aJ8WwvkuxcNOzqthYKb04/7e90a63ed39bd4b97dbf98145625d1b1/Baunfire-Lifestyle-32.jpg" alt="Green grass background" class="hero-image">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="services-label">SERVICES</p>
+                <h1 class="hero-title">SEO Services</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="content-left">
+                    <div class="intro-text">
+                        <p style="font-weight: bold;">With every website project we build, we implement the foundational elements needed <strong>to drive visibility and boost search rankings</strong>.</p>
+                        
+                        <p>Good SEO is fundamental to the success of any website. Without it, your website cannot be found by the people who need it most, and other businesses together online - and that's not a recipe for success.</p>
+                    </div>
+
+                    <!-- Services List -->
+                    <div class="services-list">
+                        <h3>Related Services</h3>
+                        <ul>
+                            <li>Technical Audits</li>
+                            <li>Content Strategy</li>
+                            <li>Link Building</li>
+                            <li>Ongoing SEO Maintenance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Services -->
+                    <div class="additional-services">
+                        <h4>RELATED SERVICES</h4>
+                        <ul class="service-links">
+                            <li><a href="#">Website Redesign</a></li>
+                            <li><a href="#">Content Strategy</a></li>
+                            <li><a href="#">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="content-right">
+                    <div class="content-text">
+                        <p>Baunfire is working with agency-focused, high-end, California — the heart of Silicon Valley. We specialize in creating business websites that online presence through all of our services including web design, development, branding, and digital marketing. We understand that businesses need to be able to reach and many businesses looking to be visible in search results and improve — to attract prospects, and bring in clients.</p>
+
+                        <p>If your company is looking for a SEO consultant to improve your website's search engine rankings, then you've come to the right place. Our team of SEO experts have the latest techniques and tools to analyze your website, fix search engines and improve its overall performance. From keyword research and on-page optimization and link building, Baunfire has the expertise to help you succeed online.</p>
+
+                        <p>SEO is a long-term investment, and our process that can take months to years to see results. However, the benefits are worth it. A well-optimized website can drive more traffic, generate more leads, and increase revenue. Google has been open about the need for quality content and user experience, and we focus on both of these elements. We believe in the power of content marketing, and we know that high-quality content is essential for SEO success. We also understand the importance of user experience, and we work to ensure that your website is easy to navigate and provides value to your visitors.</p>
+
+                        <p>Our focus on technical SEO and link building processes, working closely with our clients to understand their goals and objectives. We take the time to understand your business, your target audience, and your competition. We then develop a customized SEO strategy that is designed to help you achieve your goals.</p>
+
+                        <p>Whether you're just starting out or you're looking to improve your existing SEO efforts, Baunfire can help. We offer a full range of SEO services and we work with businesses of all sizes. Contact us today to learn more about our SEO services and how we can help you grow your business online.</p>
+                    </div>
+
+                    <div class="cta-section">
+                        <a href="#" class="cta-link">LET'S TALK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Recent Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="text-center" style="color: rgb(255, 244, 244); font-size: 40px; font-weight: bold;">Recent Work</h2>
+            </div>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-6">
+                    <div class="project-card fade-in-up">
+                        <a href=".html">
+                            <img src="https://images.ctfassets.net/eqb1x10m46e1/4mEGXgt1ZbAULLNGBxylr9/8d0b75b0443d2b0866e690d8b2e5594a/Baunfire_CaseStudy_Incorta_CorporateB2BWebsite_Thumbnail_A.png?w=840&h=1122&q=90&fm=webp" alt="Project 1">
+                        </a>
+                        <div class="project-info">
+                            <h3>Incorta</h3>
+                            <p>corporate website</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-6">
+                    <div class="project-card fade-in-up">
+                        <a href=".html">
+                            <img src="https://images.ctfassets.net/eqb1x10m46e1/2j25qGEC9lMXKc0MqQ8jla/bd067d37960cd54418a84db378a48473/Thumbnail_840_x_1122.png?w=840&h=1122&q=90&fm=webp" alt="Project 2">
+                        </a>
+                        <div class="project-info">
+                            <h3>Unifi Protocol</h3>
+                            <p>corporate website</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="con">
+         <div class="cont">
+            <div class="subtitle">Work With Us</div>
+            <h1 class="main-title">Let's work together to build something great.</h1>
+            <a href="letstalk.html" class="cta-button"style="color: #000000;">Say Hello</a>
+        </div>
+    </div>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">BAUNFIRE</div>
+                    <p class="footer-tagline">Making great things in Silicon Valley.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Dribbble</a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">GET IN TOUCH</h3>
+                    <a href="/cdn-cgi/l/email-protection#4028252c2c2f002221352e262932256e232f2d" class="footer-email"><span class="__cf_email__" data-cfemail="7018151c1c1f301211051e161902155e131f1d">hello@baunfire.com</span></a>
+                    <a href="tel:4088998998" class="footer-phone">(408) 899-8998</a>
+                </div>
+                
+                <div class="footer-nav">
+                    <h3 class="footer-title">EXPLORE</h3>
+                    <a href="work.html" class="footer-link">Work</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="letstalk.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-address">
+                75 E Santa Clara St, Ste 1425 San Jose, California 95113
+            </div>
+        </div>
+    </footer>
+</body>
+</body>
+</html>
